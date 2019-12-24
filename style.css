@@ -20,16 +20,34 @@ hr {
 	margin-left: 30%;
 }
 
-html {
-	background-color: #ffd9e6;
+#code-block {
+	background-color: #eee;
+	border: 1px solid #999;
+	display: block;
+	padding: 20px;
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	overflow-x: auto;
+	white-space: nowrap;
+}
+
+#statusMessage {
+	position: relative;
+	top: 40px;
+}
+
+.textLeft {
+	text-align: left;
 }
 
 .buttonGroup {
-	text-align: center;
+	position: relative;
+	top: 20px;
 }
 
-.statusPesan {
-	text-align: center;
+.hidden {
+	display: none;
 }
 
 input[type="text"] {
