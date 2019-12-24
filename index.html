@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Calculator</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+	<h1>A Basic Calculator</h1>
+	<hr>
+	<div id="container">
+		<form name="calc">
+			<div>
+				<input type="text" name="output" placeholder="0">
+			</div>
+			<div>
+				<input type="button" name="1" value=" 1" class="left_most" onclick="ent('1')">
+				<input type="button" name="2" value=" 2" onclick="ent('2')">
+				<input type="button" name="3" value=" 3" onclick="ent('3')">
+				<input type="button" name="/" value=" /" onclick="ent('/')">
+			</div>
+			<div>
+				<input type="button" name="4" value=" 4" class="left_most" onclick="ent('4')">
+				<input type="button" name="5" value=" 5" onclick="ent('5')">
+				<input type="button" name="6" value=" 6" onclick="ent('6')">
+				<input type="button" name="*" value=" x" onclick="ent('*')">
+			</div>
+			<div>
+				<input type="button" name="7" value=" 7" class="left_most" onclick="ent('7')">
+				<input type="button" name="8" value=" 8" onclick="ent('8')">
+				<input type="button" name="9" value=" 9" onclick="ent('9')">
+				<input type="button" name="-" value=" -" onclick="ent('-')">
+			</div>
+			<div>
+				<input type="button" name="(" value=" (" class="left_most" onclick="ent('(')">
+				<input type="button" name=")" value=" )" onclick="ent(')')">
+				<input type="button" name="0" value=" 0" onclick="ent('0')">
+				<input type="button" name="+" value=" +" onclick="ent('+')">
+			</div>
+			<div>
+				<input type="button" name="c" value=" c" class="left_most" onclick="erase()">
+				<input type="button" name="." value=" ." onclick="ent('.')">
+				<input type="button" name="=" value=" =" onclick="calculate()">
+				<input type="button" name="%" value=" %" onclick="ent('%')">
+			</div>
+			<br>
+		</form>
+	</div>
+
+	<hr>
+	<!--Konten LIFF v2-->
+
+	<div id="liffAppContent">
+		<!-- ACTION BUTTONS -->
+		<div class="buttonGroup">
+			<div class="buttonRow">
+				<button id="openWindowButton" class="btn btn-success btn-small">Open External Window</button>
+				<button id="closeWindowButton" class="btn btn-danger btn-small">Close LIFF App</button>
+				<button id="sendMessageButton" class="btn btn-warning btn-small">Send Message</button>
+			</div>
+
+		</div>
+		<!-- LIFF DATA -->
+		<div id="liffData">
+			<h3 id="liffDataHeader" class="textLeft">Informasi:</h3>
+			<table>
+				<tr>
+					<th>isInClient : </th>
+					<td id="isInClient" class="textLeft"></td>
+				</tr>
+				<tr>
+					<th>isLoggedIn : </th>
+					<td id="isLoggedIn" class="textLeft"></td>
+				</tr>
+			</table>
+		</div>
+		<!-- LOGIN LOGOUT BUTTONS -->
+		<div class="buttonGroup">
+			<button id="liffLoginButton" class="btn btn-success btn-small">Log in</button>
+			<button id="liffLogoutButton" class="btn btn-warning btn-small">Log out</button>
+		</div>
+		<div id="statusMessage" class="statusPesan">
+			<div id="isInClientMessage"></div>
+			<div id="apiReferenceMessage">
+				<p>Available LIFF methods vary depending on the browser you use to open the LIFF app.</p>
+				<p>Please refer to the <a href="https://developers.line.biz/en/reference/liff/#initialize-liff-app">API
+						reference
+						page</a> for more information.</p>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="script.js"></script>
+	<script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
+	<script src="liff-starter.js"></script>
+
+
+</body>
+
+</html>
