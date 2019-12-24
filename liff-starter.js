@@ -1,6 +1,6 @@
 window.onload = function () {
     const useNodeJS = false; // if you are not using a node server, set this value to false
-    const defaultLiffId = "1653673052-qRyVzNZk"; // change the default LIFF value if you are not using a node server
+    const defaultLiffId = "1653700160-kPxln8o5"; // change the default LIFF value if you are not using a node server
 
     // DO NOT CHANGE THIS
     let myLiffId = "";
@@ -102,7 +102,7 @@ function registerButtonHandlers() {
     // openWindow call
     document.getElementById('openWindowButton').addEventListener('click', function () {
         liff.openWindow({
-            url: 'https://calculatorku.herokuapp.com/', // Isi dengan Endpoint URL aplikasi web Anda
+            url: 'https://kalkulatorapp.herokuapp.com/', // Isi dengan Endpoint URL aplikasi web Anda
             external: true
         });
     });
